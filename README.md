@@ -17,7 +17,15 @@ Navigate to the source folder of your catkin workspace, download and build the s
 ```
 cd ~/catkin_ws/src
 git clone https://github.com/B-Bhanu-Teja/Ewok-Planner.git
-cd ..
+```
+### 2 Settings in trajectory_replanning_example_pointCloud.cpp
+
+Add camera link name and point cloud topic name 
+Appropriate comments are provided where to add
+```
+cd ~/catkin_ws/src/ewok_simulation/src/
+gedit trajectory_replanning_example_pointCloud.cpp
+cd ../..
 catkin_make
 ```
 # Ewok-Planner
