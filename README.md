@@ -51,7 +51,7 @@ commander takeoff
 
 ### Terminal 2:-
 ```bash
-cd Ewok_ws/
+cd catkin_ws/
 source devel/setup.bash
 roslaunch ewok_simulation trajectory_replanning_rishabh.launch
 ```
