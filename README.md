@@ -32,7 +32,7 @@ catkin_make
 Step 1: Download QGC to Control the Drone
 
 Step 2: In PX4-Autopilot/launch/mavros_posix_sitl.launch
-change sdf file of vehicle model by removing the eprevious line and adding below line
+change sdf file of vehicle model by removing the previous line and adding below line
 ```bash
     <arg name="sdf" default="$(find mavlink_sitl_gazebo)/models/iris_depth_camera/iris_depth_camera.sdf"/>
 
