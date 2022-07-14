@@ -68,7 +68,9 @@ void pointCloudCallback(const sensor_msgs::PointCloud2 msg)
 
         listener->lookupTransform("map", "camera_link", msg.header.stamp, transform);        
     }
-
+////////////////////////////////////////////////////////////////////////////////////////////
+/// add your sensor frame link name above instead of camera_link///////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
     catch (tf::TransformException &ex){
         ROS_INFO("Couldn't get transform");
         ROS_WARN("%s", ex.what());
@@ -253,7 +255,10 @@ int main(int argc, char** argv){
 
     message_filters::Subscriber<sensor_msgs::PointCloud2> depth_image_sub_ ;
     depth_image_sub_.subscribe(nh, "/camera/depth/points", 5);
-    // depth_image_sub_.subscribe(nh, "output", 5);
+    // depth_image_sub_.subscribe(nh, "output", 5);   
+    /////////////////////////////////////////////////////////////////////////////////////
+    // change the topic name to your point cloud topic name ^^^^^^^^^///////////////////
+    ///////////////////////////////////////////////////////////////////////////////////
 
     tf::MessageFilter<sensor_msgs::PointCloud2> tf_filter_(depth_image_sub_, *listener, "map", 5);
     tf_filter_.registerCallback(pointCloudCallback);
