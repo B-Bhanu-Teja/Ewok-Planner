@@ -1,5 +1,27 @@
+### 1 Installation
+
+The system has been tested with  Ubuntu 20.04 (ROS Noetic) and Ubuntu 18.04 (ROS Melodic). For Ubuntu 16.04 (ROS Kinetic) switch to `ubuntu_16_04_kinetic` branch.
+
+Follow the tutorials to [install ROS Noetic for 20.04 or ROS Melodic for 18.04 (desktop-full)](http://wiki.ros.org/ROS/Installation) and to [set up catkin workspace](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment).
+
+Install dependencies. For Ubuntu 20.04 (ROS Noetic):
+```
+sudo apt-get install git python python3-matplotlib python3-numpy libeigen3-dev libgoogle-glog-dev libatlas-base-dev libsuitesparse-dev protobuf-compiler libnlopt-dev libnlopt-cxx-dev ros-noetic-octomap ros-noetic-octomap-ros ros-noetic-octomap-msgs ros-noetic-tf-conversions ros-noetic-eigen-conversions
+```
+For Ubuntu 18.04 (ROS Melodic):
+```
+sudo apt-get install git python3-matplotlib python3-numpy libeigen3-dev libgoogle-glog-dev libatlas-base-dev libsuitesparse-dev protobuf-compiler libnlopt-dev ros-melodic-octomap ros-melodic-octomap-ros ros-melodic-octomap-msgs ros-melodic-tf-conversions ros-melodic-eigen-conversions
+```
+
+Navigate to the source folder of your catkin workspace, download and build the software:
+```
+cd ~/catkin_ws/src
+git clone 
+cd ..
+catkin_make
+```
 # Ewok-Planner
-Steip 1: Download QGC to Control the Drone
+Step 1: Download QGC to Control the Drone
 
 Step 2: In PX4-Autopilot/launch/mavros_posix_sitl.launch
 change sdf file of vehicle model by removing the eprevious line and adding below line
