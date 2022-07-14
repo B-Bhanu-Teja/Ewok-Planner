@@ -16,7 +16,7 @@ sudo apt-get install git python3-matplotlib python3-numpy libeigen3-dev libgoogl
 Navigate to the source folder of your catkin workspace, download and build the software:
 ```
 cd ~/catkin_ws/src
-git clone 
+git clone https://github.com/B-Bhanu-Teja/Ewok-Planner.git
 cd ..
 catkin_make
 ```
